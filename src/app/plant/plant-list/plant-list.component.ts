@@ -19,6 +19,7 @@ export class PlantListComponent implements OnInit {
       this.plants = plants;
       this.countType();
     });
+    this.helloWorld();
   }
 
   helloWorld(): void {
