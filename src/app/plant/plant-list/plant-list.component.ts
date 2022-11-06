@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Plant } from '../plant';
-import { PlantService } from '../plant.service';
+import { Component, OnInit } from "@angular/core";
+import { Plant } from "../plant";
+import { PlantService } from "../plant.service";
 
 @Component({
-  selector: 'app-plant-list',
-  templateUrl: './plant-list.component.html',
-  styleUrls: ['./plant-list.component.css'],
+  selector: "app-plant-list",
+  templateUrl: "./plant-list.component.html",
+  styleUrls: ["./plant-list.component.css"],
 })
 export class PlantListComponent implements OnInit {
   plants: Array<Plant> = [];
@@ -21,13 +21,17 @@ export class PlantListComponent implements OnInit {
     });
   }
 
+  helloWorld(): void {
+    console.log("Hello, World");
+  }
+
   countType(): void {
     let numberIntF = 0;
     let numberExtF = 0;
     this.plants.forEach(function (value) {
-      if (value.tipo === 'Interior') {
+      if (value.tipo === "Interior") {
         numberIntF++;
-      } else if (value.tipo === 'Exterior') {
+      } else if (value.tipo === "Exterior") {
         numberExtF++;
       }
     });
